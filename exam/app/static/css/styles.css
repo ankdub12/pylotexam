@@ -1,0 +1,17 @@
+* {
+  font-family: monaco;
+}
+
+.mainpage{
+
+	border: solid 2px black;
+	display: inline-block;
+	width: 300px;
+	height: 500px;
+	vertical-align: top;
+	padding-right: 30px;
+	
+}
+.button{
+	background-color: lightblue;
+}

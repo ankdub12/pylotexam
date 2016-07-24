@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+	</head>
+<body>
+{% with messages = get_flashed_messages() %}
+ {% if messages %}
+  {% for message in messages %}
+    <p>{{message}}</p>
+  {% endfor %}
+ {% endif %}
+{% endwith %}
+
+
+ 	<table>
+ 	<tr><h1>Registration</h1></tr>
+ 	<div>
+ 	<form action="/registration" method="post" >
+		<tr><td>Name:</td> <td><input type="text" name="name"></td></tr>
+		<tr><td>Alias:</td><td><input type="text" name="alias"></td></tr>
+		<tr><td>Email:</td><td><input type="email" name="email"></td></tr>
+		<tr><td>Password:</td><td><input type="password" name="password"></td></tr>
+		<tr><td>Confirm Password:</td><td><input type="password" name="confirm_password"></td></tr>
+		<tr><td><input  class="button" type="submit" name="submit" value="Register"></td></tr>
+	</form></div>
+	</table>
+	<table>
+	<div>
+
+	<form action="/login" method= "post">
+		<tr><h1>Login</h1></tr>
+		<tr><td>Email :</td><td><input type="email" name="email"></td></tr>
+		<tr><td>Password:</td><td><input type="password" name="password"></td></tr>
+		<tr><td><input class="button" type="submit" name="submit" value="login"></td></tr>
+	</form>
+	</div>
+	</table>
+
+</body>
+</html>
